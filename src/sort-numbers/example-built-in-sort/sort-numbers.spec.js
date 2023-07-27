@@ -7,6 +7,11 @@ describe('sortNumbers sorts an array of numbers', () => {
       const received = sortNumbers([5, 2, 0, 3, 1]);
       expect(received).toEqual(expected);
     });
+    it('whole numbers', () => {
+      const expected = [1, 3, 4, 7, 9, 10];
+      const received = sortNumbers([10, 4, 7, 1, 9, 3]);
+      expect(received).toEqual(expected);
+    });
     it('decimal numbers', () => {
       const expected = [0, 1.11, 2.01, 3.8, 5.4];
       const received = sortNumbers([5.4, 2.01, 3.8, 0, 1.11]);
